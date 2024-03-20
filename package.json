@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npm run build && node lib/index.js",
     "build": "babel --presets es2015 -d lib/ src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,8 @@
     "babel-preset-es2015": "^6.24.1",
     "dotenv": "^6.1.0",
     "ethers": "^4.0.13",
-    "web3": "^1.0.0-beta.36"
-  }
+    "web3": "^1.0.0-beta.36",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
